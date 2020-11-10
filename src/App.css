@@ -1,38 +1,235 @@
-.App {
-  text-align: center;
+html, body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #333;
+  font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
+p {
+  line-height: 1.2;
+  max-width: 50em;
+}
+
+p.resume {
+  line-height: 1.3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  color: #151515;
+  letter-spacing: 1.3px;
+}
+
+button, input {
+  font-family: Hind, sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.wrap, .row, .tab-row {
+  margin: 0 auto;
+  max-width: 780px;
+}
+
+h1, h2, p {
+  margin: 1em 0;
+}
+
+h1.title1 {
+  font-family: 'Hepta Slab', serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #151515;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+h1.title2 {
+  font-family: 'Hepta Slab', serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #F84B12;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 600px) {
+  h1.title1 {
+    font-size: 32px;
+  }
+  h1.title2 {
+    font-size: 32px;
+  }
+}
+h2 {
+  font-size: 2rem;
+  line-height: 0.5;
+}
+a {
+  color: #e14;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.row:after, .tab-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.main .row:before, .main .row:after, .main .tab-row:before, .main .tab-row:after {
+  content: '';
+  display: table;
+}
+.main section {
+  padding: 0 1rem;
+  min-height: auto;
+  height: 100%;
+  background: white;
+}
+.footer {
+  background: #F84B12;
+  color: #ffffff;
+  margin-top: 30px;
+  padding: 100px 0 10px 0;
+}
+.footer li {
+  line-height: 1.5;
+}
+.footer a {
+  color: #fff;
+}
+.footer hr {
+  max-width: 1000px;
+  border: 0;
+  height: 1px;
+  background: #ffffff;
+}
+.container_footer {
+  text-align: center;
+  margin: 40px 0 40px 0;
+}
+.container_footer p.copy_footer {
+  color: #ffffffad;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 10px;
+  text-align: center;
+  display: inline-flex;
+}
+.social_footer {
+  margin: 5px 0 35px 0;
+}
+.social_footer a {
+  padding: 0 25px 0 25px;
+}
+h3.footer_resume  {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Hepta Slab';
+  color: #ffffff;
+  letter-spacing: 1.2px;
+  line-height: 1.4;
+}
+
+.footer_mail {
+  text-align: center;
+  display: block;
+  margin: 20px;
+}
+
+.col-4, .col-6, .col-12 {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .col-4, .col-6, .col-12 {
+    float: left;
+  }
+}
+.tab-row > .col-4, .tab-row > .col-6, .tab-row > .col-12 {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  float: none;
+}
+
+@media screen and (min-width: 640px) {
+  .col-4 {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .footer_mail .MuiInputBase-input {
+    padding: 6px 15px 7px;
+  }
+  .footer {
+     padding: 45px 0 20px 0;
+  }
+  h3.footer_resume {
+    margin: 0 35px;
+    font-size: 18px;
+  }
+  img.selo {
+    max-width: 300px !important;
+  }
+  .footer_mail {
+    margin-top: 20px;
+  }
+  .SnackbarItem-wrappedRoot-27 {
+    top: -40px !important; 
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .col-6 {
+    width: 50%;
+  }
+}
+/*material input*/
+form .MuiInputBase-input {
+  font-family: 'Montserrat', sans-serif;
+  padding: 6px 150px 7px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+form .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 2px solid rgb(255 255 255 / 87%);
+}
+
+form .MuiInput-underline:before {
+  border-bottom: 1px solid rgb(255 255 255);
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form .MuiInput-underline:after {
+  border-bottom: 2px solid #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form .MuiButton-root {
+  color: #ffffff;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  text-transform: inherit;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+form .MuiButton-root:hover {
+  text-decoration: none;
+  background-color: rgb(230 65 11) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img.selo {
+  width: 100%;
+  max-width: 440px;
+  margin-left: -10px;
+}
+
+.SnackbarItem-contentRoot-24 {
+  align-items: center !important;
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #4caf50 !important;
 }
