@@ -4,7 +4,6 @@ import Manifesto from "./components/Manifesto/Manifesto"
 import Footer from "./components/Footer/Footer"
 import { SnackbarProvider } from 'notistack';
 
-
 const App = () => (
   <div>
     <Manifesto />
