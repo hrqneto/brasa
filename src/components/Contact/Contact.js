@@ -5,7 +5,6 @@ import Input from '@material-ui/core/Input';
 import { useSnackbar } from 'notistack';
 
 
-
 const Contact = () => {
 
   const { enqueueSnackbar } = useSnackbar();
